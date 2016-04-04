@@ -1,0 +1,30 @@
+# Project: Linker
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = DataLinker.o $(RES)
+LINKOBJ  = DataLinker.o $(RES)
+LIBS =  -L"D:/CDev-Cpp/Dev-Cpp/lib"  
+INCS =  -I"D:/CDev-Cpp/Dev-Cpp/include" 
+CXXINCS =  -I"D:/CDev-Cpp/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/CDev-Cpp/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/CDev-Cpp/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/CDev-Cpp/Dev-Cpp/include/c++/3.4.2"  -I"D:/CDev-Cpp/Dev-Cpp/include" 
+BIN  = Linker.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Linker.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Linker.exe" $(LIBS)
+
+DataLinker.o: DataLinker.c
+	$(CC) -c DataLinker.c -o DataLinker.o $(CFLAGS)
