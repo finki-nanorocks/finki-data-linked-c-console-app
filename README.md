@@ -1,3 +1,4 @@
-# data-linked-c-console-app
+# DataLinker
+DataLinker is App basely to remember URLs and links to browse. In base, App work whit files
 
-App basely to remember URLs and links to browser
+All Links are save in path/link.txt
